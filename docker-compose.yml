@@ -8,8 +8,7 @@ services:
     container_name: bc-db
     image: mysql:5.7
     volumes:
-      - develop/volumes/mysql:/var/lib/mysql
-      # - db-volume:/var/lib/mysql # windowsの場合はコメントを外し、上の行をコメントアウトする
+      - db-volume:/var/lib/mysql
       # - develop/mysql/docker-entrypoint-initdb.d:/docker-entrypoint-initdb.d
     ports:
       - 3306:3306
